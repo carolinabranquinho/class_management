@@ -78,3 +78,76 @@ header {
   width: 100%;
   transition: width 200ms ease-in-out;
 }
+
+/* ============= CARD =============== */
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 800px;
+  min-height: 400px;
+  background-color: black;
+  margin: 2rem auto;
+  box-shadow: 2px 2px rgba(100, 100, 100, 0.2);
+  border-radius: 2px;
+  animation-name: up 200ms ease;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.image {
+  background-image: url(https://source.unsplash.com/collection/10356769/500x500);
+  width: 400px;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+
+.content {
+  font-family: "Red Rose", cursive;
+  padding: 0.5rem;
+  color: white;
+}
+
+.content .item {
+  padding: 0.7rem;
+  border-bottom: 0.1px solid rgba(100, 100, 100, 0.3);
+}
+
+.content .item div:nth-child(1) {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.content .item div:nth-child(2) {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.content h3 {
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.content .item:last-child {
+  border: none;
+}
+
+.content .item span {
+  background-color: #7777;
+  padding: 8px 16px;
+  border-radius: 16px;
+  margin-left: 4px;
+  display: inline-block;
+  margin-top: 8px;
+}
