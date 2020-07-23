@@ -105,7 +105,7 @@ header {
 }
 
 .image {
-  background-image: url(https://source.unsplash.com/collection/10356769/500x500);
+  background-image: url(https://source.unsplash.com/collection/10356769/600x600);
   width: 400px;
   min-height: 400px;
   background-repeat: no-repeat;
@@ -150,4 +150,47 @@ header {
   margin-left: 4px;
   display: inline-block;
   margin-top: 8px;
+}
+
+/* ============== FORM ==================*/
+
+input {
+  margin-top: 5px;
+  width: 100%;
+  padding: 0.2rem;
+  outline: none;
+  font-size: 18px;
+  color: #555;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+
+select {
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 0.2rem;
+  color: #555;
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+input[type="date"]::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+button[type="submit"] {
+  padding: 8px 16px;
+  width: 100%;
+  border-radius: 4px;
+  margin: 5px auto;
+  font-weight: bold;
+  font-size: 15px;
 }

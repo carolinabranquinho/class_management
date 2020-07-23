@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://www.google.com",
+      "name": "Carolina Alves Branquinho",
+      "birth": 815011200000,
+      "scholarity": "graduate",
+      "type_class": "on",
+      "subjects": "Something",
+      "created_at": 1595538793345
+    }
+  ]
+}

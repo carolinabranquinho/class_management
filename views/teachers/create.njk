@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <form class="card" method="POST" action="/teachers">
+        <section class="image"></section>
+        <section class="content">
+            <h3>Teacher</h3>
+
+            <div class="item">
+                <div>Avatar URL</div>
+                <div><input type="url" name="avatar_url" placeholder="http://"></div>
+            </div>
+
+            <div class="item">
+                <div>Name</div>
+                <div><input type="text" name="name" placeholder="Teacher's name"></div>
+            </div>
+
+            <div class="item">
+                <div>Age</div>
+                <div><input type="date" name="birth"></div>
+            </div>
+
+            <div class="item">
+                <div>Scholarity</div>
+                <div>
+                    <select name="scholarity">
+                        <option value="high school">High School</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="masters">Master's Degree</option>
+                        <option value="doctorate">Doctorate Degree</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Type of Class</div>
+                <div>
+                    <span><input type="radio" name="type_class">Distance</span>
+                    <span><input type="radio" name="type_class">Presential</span></div>
+            </div>
+
+            <div class="item">
+                <div>Subjects</div>
+                <div>
+                    <input type="text" name="subjects" placeholder="Put subjects separated by commas">
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </section>
+    </form>
+{% endblock content %}
