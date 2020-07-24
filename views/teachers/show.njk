@@ -4,40 +4,41 @@
     <div class="card">
         <section class="image"></section>
         <section class="content">
-            <h3>Detalhes</h3>
+            <h3>Teacher Profile</h3>
 
             <div class="item">
-                <div>Nome</div>
-                <div>Carolina Alves</div>
+                <div>Name</div>
+                <div>{{ teacher.name }}</div>
             </div>
 
             <div class="item">
-                <div>Idade</div>
-                <div>24</div>
+                <div>Age</div>
+                <div>{{ teacher.age }}</div>
             </div>
 
             <div class="item">
-                <div>Grau de Escolaridade</div>
-                <div>Ensino Superior</div>
+                <div>Scholarity</div>
+                <div>{{ teacher.scholarity }}</div>
             </div>
 
             <div class="item">
-                <div>Tipo de Aula</div>
-                <div>A distância</div>
+                <div>Type of Class</div>
+                <div>{{ teacher.type_class }}</div>
             </div>
 
             <div class="item">
-                <div>Acompanhamento</div>
+                <div>Subjects</div>
                 <div>
-                    <span>Matemática</span>
-                    <span>Física</span>
+                    {% for subject in teacher.subjects %}
+                        <span>{{subject}}</span>
+                        {% endfor%}
+                    </div>
                 </div>
-            </div>
 
-            <div class="item">
-                <div>Desde</div>
-                <div>01/01/2019</div>
-            </div>
-        </section>
-    </div>
-{% endblock content %}
+                <div class="item">
+                    <div>Since</div>
+                    <div>{{ teacher.date}}</div>
+                </div>
+            </section>
+        </div>
+    {% endblock content %}
