@@ -1,6 +1,8 @@
 const fs = require("fs");
 const data = require("./data.json");
 
+exports.show = function (req, res) {};
+
 exports.post = function (req, res) {
   let keys = Object.keys(req.body);
 
