@@ -1,6 +1,6 @@
 const fs = require("fs");
 const data = require("./data.json");
-const { calc_age } = require("./utils");
+const { calc_age, calc_date } = require("./utils");
 
 exports.show = function (req, res) {
   const { id } = req.params;
@@ -9,6 +9,8 @@ exports.show = function (req, res) {
     return teacher.id == id;
   });
 
+  if (!foundTeacher) return res.send("Teacher doesn't exist!");
+
   const teacher = {
     ...foundTeacher,
     age: calc_age(foundTeacher.birth),
@@ -16,9 +18,7 @@ exports.show = function (req, res) {
     date: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at),
   };
 
-  return !foundTeacher
-    ? res.send("Teacher doesn't exist!")
-    : res.render("teachers/show", { teacher });
+  return res.render("teachers/show", { teacher });
 };
 
 exports.post = function (req, res) {
@@ -50,4 +50,21 @@ exports.post = function (req, res) {
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     return err ? res.send("Write file error!") : res.redirect("/teachers");
   });
+};
+
+exports.edit = function (req, res) {
+  const { id } = req.params;
+
+  const foundTeacher = data.teachers.find((teacher) => {
+    return teacher.id == id;
+  });
+
+  if (!foundTeacher) return res.send("Teacher doesn't exist!");
+
+  const teacher = {
+    ...foundTeacher,
+    birth: calc_date(foundTeacher.birth),
+  };
+
+  return res.render("teachers/edit", { teacher });
 };

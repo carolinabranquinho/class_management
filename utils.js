@@ -12,4 +12,13 @@ module.exports = {
 
     return age;
   },
+  calc_date: function (timestamp) {
+    const date = new Date(timestamp);
+
+    const year = date.getFullYear();
+    const month = `0${date.getMonth()}`.slice(-2);
+    const day = `0${date.getDate()}`.slice(-2);
+
+    return `${year}-${month}-${day}`;
+  },
 };

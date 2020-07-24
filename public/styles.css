@@ -186,6 +186,7 @@ input[type="date"]::placeholder {
   font-weight: normal;
 }
 
+a.button,
 button[type="submit"] {
   padding: 8px 16px;
   width: 100%;
@@ -193,4 +194,13 @@ button[type="submit"] {
   margin: 5px auto;
   font-weight: bold;
   font-size: 15px;
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #555;
 }
