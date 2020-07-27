@@ -261,3 +261,9 @@ tbody td:last-child a {
   display: inline-block;
   margin: 5px;
 }
+
+header .active {
+  font-family: "Red Rose", cursive;
+  font-weight: bold;
+  font-size: 16px;
+}
