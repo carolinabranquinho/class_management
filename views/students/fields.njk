@@ -1,0 +1,47 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div><input type="url" name="avatar_url" placeholder="http://" value="{{ student.avatar_url }}"></div>
+</div>
+
+<div class="item">
+    <div>Name</div>
+    <div><input type="text" name="name" placeholder="student's name" value="{{ student.name }}"></div>
+</div>
+
+<div class="item">
+    <div>Email</div>
+    <div><input type="email" name="email" placeholder="student's email" value="{{ student.email }}"></div>
+</div>
+
+<div class="item">
+    <div>Age</div>
+    <div><input type="date" name="birth" value="{{ student.birth }}"></div>
+</div>
+
+<div class="item">
+    <div>School Year</div>
+    <div>
+        <select name="scholarity">
+            <option value="Grade 7" {% if student.scholarity=="Grade 7" %} selected="selected" {% endif %}>Grade 7</option>
+            <option value="Grade 8" {% if student.scholarity=="Grade 8" %} selected="selected" {% endif %}>Grade 8</option>
+            <option value="Grade 9" {% if student.scholarity=="Grade 9" %} selected="selected" {% endif %}>Grade 9</option>
+            <option value="Grade 10" {% if student.scholarity=="Grade 10" %} selected="selected" {% endif %}>Grade 10</option>
+            <option value="Grade 11" {% if student.scholarity=="Grade 11" %} selected="selected" {% endif %}>Grade 11</option>
+            <option value="Grade 12" {% if student.scholarity=="Grade 12" %} selected="selected" {% endif %}>Grade 12</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Type of Class</div>
+    <div>
+        <span><input type="radio" name="type_class" value="Distance" {% if student.type_class=="Distance" %} checked="checked" {% endif %}>Distance</span>
+        <span><input type="radio" name="type_class" value="Presential" {% if student.type_class=="Presential" %} checked="checked" {% endif %}>Presential</span></div>
+</div>
+
+<div class="item">
+    <div>Hours/Week</div>
+    <div><input type="number" name="hours" value="{{ student.hours }}"></div>
+</div>
+
+<button type="submit">Submit</button>

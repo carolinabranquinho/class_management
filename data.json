@@ -1,10 +1,10 @@
 {
   "teachers": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "https://images.unsplash.com/photo-1581726690015-c9861fa5057f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
       "name": "Carolina Branquinho",
-      "birth": 815011200000,
+      "birth": 812419200000,
       "scholarity": "High School",
       "type_class": "Distance",
       "subjects": "Bullet Journal, KPOP, HTS",
@@ -29,6 +29,28 @@
         " HTAP",
         " DOTA"
       ]
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "avatar_url": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Flávia",
+      "email": "flavia@gmail.com",
+      "birth": 962668800000,
+      "scholarity": "Grade 10",
+      "type_class": "Distance",
+      "hours": "30"
+    },
+    {
+      "id": "2",
+      "avatar_url": "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Roniscleyson",
+      "email": "emailinstitucional@exemplo.com",
+      "birth": 785980800000,
+      "scholarity": "Grade 12",
+      "type_class": "Distance",
+      "hours": "45"
     }
   ]
 }

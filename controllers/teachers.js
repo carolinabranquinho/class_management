@@ -1,6 +1,10 @@
 const fs = require("fs");
-const data = require("./data.json");
-const { calc_age, calc_date } = require("./utils");
+const data = require("../data.json");
+const { calc_age, calc_date } = require("../utils");
+
+exports.create = function (req, res) {
+  return res.render("teachers/create");
+};
 
 exports.index = function (req, res) {
   return res.render("teachers/index", { teachers: data.teachers });

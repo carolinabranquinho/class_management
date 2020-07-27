@@ -246,6 +246,7 @@ tbody td:nth-child(2) {
   vertical-align: center;
 }
 
+.new_member,
 tbody td:last-child a {
   text-decoration: none;
   padding: 8px 16px;
@@ -254,4 +255,9 @@ tbody td:last-child a {
   font-size: 12px;
   background-color: #7777;
   border-radius: 8px;
+}
+
+.new_member {
+  display: inline-block;
+  margin: 5px;
 }
