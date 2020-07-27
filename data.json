@@ -1,24 +1,14 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "avatar_url": "http://www.google.com",
-      "name": "Carolina Alves Branquinho",
-      "birth": 815011200000,
-      "scholarity": "graduate",
-      "type_class": "Distance",
-      "subjects": "Math, Geo",
-      "created_at": 1595622604206
-    },
-    {
       "id": 2,
       "avatar_url": "http://www.google.com",
-      "name": "Roniscleyson",
-      "birth": 788572800000,
-      "scholarity": "Graduate",
+      "name": "Carol",
+      "birth": 812419200000,
+      "scholarity": "Master's Degree",
       "type_class": "Distance",
-      "subjects": "catira",
-      "created_at": 1595625983380
+      "subjects": "kpop, inglês, programação",
+      "created_at": 1595860160289
     }
   ]
 }
