@@ -1,43 +1,32 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-    <div class="card">
-        <section class="image"></section>
-        <section class="content">
-            <h3>Detalhes</h3>
-
-            <div class="item">
-                <div>Nome</div>
-                <div>Carolina Alves</div>
-            </div>
-
-            <div class="item">
-                <div>Idade</div>
-                <div>24</div>
-            </div>
-
-            <div class="item">
-                <div>Grau de Escolaridade</div>
-                <div>Ensino Superior</div>
-            </div>
-
-            <div class="item">
-                <div>Tipo de Aula</div>
-                <div>A distância</div>
-            </div>
-
-            <div class="item">
-                <div>Acompanhamento</div>
-                <div>
-                    <span>Matemática</span>
-                    <span>Física</span>
-                </div>
-            </div>
-
-            <div class="item">
-                <div>Desde</div>
-                <div>01/01/2019</div>
-            </div>
-        </section>
+    <div class="card table_index">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Teacher</td>
+                    <td>Subjects</td>
+                    <td>More</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for teacher in teachers %}
+                    <tr>
+                        <td>
+                            <span style="background-image:url({{ teacher.avatar_url }})"></span>
+                            {{teacher.name}}</td>
+                        <td>
+                            {% for subject in teacher.subjectArray %}
+                                <span>{{ subject }}</span>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            <a href="/teachers/{{teacher.id}}">more</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock content %}

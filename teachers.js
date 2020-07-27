@@ -2,6 +2,10 @@ const fs = require("fs");
 const data = require("./data.json");
 const { calc_age, calc_date } = require("./utils");
 
+exports.index = function (req, res) {
+  return res.render("teachers/index", { teachers: data.teachers });
+};
+
 exports.show = function (req, res) {
   const { id } = req.params;
 
@@ -14,7 +18,6 @@ exports.show = function (req, res) {
   const teacher = {
     ...foundTeacher,
     age: calc_age(foundTeacher.birth),
-    subjects: foundTeacher.subjects.split(","),
     date: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at),
   };
 
@@ -45,6 +48,7 @@ exports.post = function (req, res) {
     type_class,
     subjects,
     created_at,
+    subjectArray: req.body.subjects.split(","),
   });
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
