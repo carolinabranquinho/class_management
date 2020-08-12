@@ -44,4 +44,17 @@
     <div><input type="number" name="hours" value="{{ student.hours }}"></div>
 </div>
 
+<div class="item">
+    <div>Teacher</div>
+    <div>
+        <select name="teachers">
+            {% for teacher in teachers %}
+                <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %} selected="selected" {% endif %}>
+                    {{teacher.name}}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
 <button type="submit">Submit</button>

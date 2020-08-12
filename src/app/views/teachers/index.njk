@@ -8,6 +8,7 @@
                 <tr>
                     <td>Teacher</td>
                     <td>Subjects</td>
+                    <td>Students</td>
                     <td>More</td>
                 </tr>
             </thead>
@@ -23,6 +24,9 @@
                                 .split(',') %}
                                 <span>{{ subject }}</span>
                             {% endfor %}
+                        </td>
+                        <td>
+                            {{teacher.total_students}}
                         </td>
                         <td>
                             <a href="/teachers/{{teacher.id}}">more</a>
