@@ -15,19 +15,19 @@
 
 <div class="item">
     <div>Age</div>
-    <div><input type="date" name="birth" value="{{ student.birth }}"></div>
+    <div><input type="date" name="birth" value="{{student.birth}}"></div>
 </div>
 
 <div class="item">
     <div>School Year</div>
     <div>
-        <select name="scholarity">
-            <option value="Grade 7" {% if student.scholarity=="Grade 7" %} selected="selected" {% endif %}>Grade 7</option>
-            <option value="Grade 8" {% if student.scholarity=="Grade 8" %} selected="selected" {% endif %}>Grade 8</option>
-            <option value="Grade 9" {% if student.scholarity=="Grade 9" %} selected="selected" {% endif %}>Grade 9</option>
-            <option value="Grade 10" {% if student.scholarity=="Grade 10" %} selected="selected" {% endif %}>Grade 10</option>
-            <option value="Grade 11" {% if student.scholarity=="Grade 11" %} selected="selected" {% endif %}>Grade 11</option>
-            <option value="Grade 12" {% if student.scholarity=="Grade 12" %} selected="selected" {% endif %}>Grade 12</option>
+        <select name="schooling">
+            <option value="Grade 7" {% if student.schooling=="Grade 7" %} selected="selected" {% endif %}>Grade 7</option>
+            <option value="Grade 8" {% if student.schooling=="Grade 8" %} selected="selected" {% endif %}>Grade 8</option>
+            <option value="Grade 9" {% if student.schooling=="Grade 9" %} selected="selected" {% endif %}>Grade 9</option>
+            <option value="Grade 10" {% if student.schooling=="Grade 10" %} selected="selected" {% endif %}>Grade 10</option>
+            <option value="Grade 11" {% if student.schooling=="Grade 11" %} selected="selected" {% endif %}>Grade 11</option>
+            <option value="Grade 12" {% if student.schooling=="Grade 12" %} selected="selected" {% endif %}>Grade 12</option>
         </select>
     </div>
 </div>
