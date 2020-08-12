@@ -2,7 +2,13 @@
 
 {% block content %}
     <div class="card table_index">
-        <a class="new_member" href="/teachers/create">Add Teacher</a>
+        <div class="header">
+            <a class="new_member" href="/teachers/create">Add Teacher</a>
+            <form action="/teachers" method="GET">
+                <input type="text" name="filter" placeholder="name or subjects" value="{{filter}}">
+                <button type="submit">Filter</button>
+            </form>
+        </div>
         <table width="100%">
             <thead>
                 <tr>

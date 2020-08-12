@@ -96,4 +96,21 @@ module.exports = {
       return callback();
     });
   },
+
+  findBy(filter, callback) {
+    db.query(
+      `
+    SELECT teachers.*, count(students) as total_students
+    FROM teachers 
+    LEFT JOIN students ON (students.teacher_id = teachers.id)
+    WHERE teachers.name ILIKE '%${filter}%'
+    OR teachers.subjects_taught ILIKE '%${filter}%'
+    GROUP BY teachers.id ORDER BY name ASC`,
+      (err, results) => {
+        if (err) throw `Database error ${err}`;
+
+        callback(results.rows);
+      }
+    );
+  },
 };
