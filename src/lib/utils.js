@@ -1,5 +1,5 @@
 module.exports = {
-  calc_age: function (timestamp) {
+  calc_age(timestamp) {
     const today = new Date();
     const birthDay = new Date(timestamp);
 
@@ -12,7 +12,7 @@ module.exports = {
 
     return age;
   },
-  calc_date: function (timestamp) {
+  calc_date(timestamp) {
     const date = new Date(timestamp);
 
     const year = date.getUTCFullYear();
