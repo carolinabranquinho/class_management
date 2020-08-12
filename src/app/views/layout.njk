@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/styles.css">
         {% block head %}
             <title>Classes Manager</title>
-        {% endblock %}
+        {% endblock head%}
     </head>
     <body>
         <header>
@@ -22,8 +22,8 @@
             </div>
         </header>
 
-        {% block content %}{% endblock%}
-            {% block script %}{% endblock %}
-            <script src="/scripts.js"></script>
-        </body>
-    </html>
+        {% block content %}{% endblock content%}
+        {% block script %}{% endblock script%}
+        <script src="/scripts.js"></script>
+    </body>
+</html>

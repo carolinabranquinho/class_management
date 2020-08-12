@@ -22,7 +22,7 @@ module.exports = {
       class_type,
       subjects_taught,
       created_at
-    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+    ) VALUES ($1, $2, $3, $4, $5, $6, $7)
     RETURNING id
   `;
 
@@ -61,7 +61,7 @@ module.exports = {
         birth_date=($3),
         education_level=($4),
         class_type=($5),
-        subjects_taught=($6),
+        subjects_taught=($6)
       WHERE id = $7
     `;
 

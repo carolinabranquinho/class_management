@@ -1,10 +1,10 @@
 const { calc_age, calc_date } = require("../../lib/utils");
-import Teacher from "../models/Teacher";
+const Teacher = require("../models/Teacher");
 
 module.exports = {
   index(req, res) {
-    Teacher.all((teacher) => {
-      return res.render("teachers/index", { teacher });
+    Teacher.all((teachers) => {
+      return res.render("teachers/index", { teachers });
     });
   },
 

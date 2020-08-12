@@ -10,17 +10,17 @@
 
 <div class="item">
     <div>Age</div>
-    <div><input type="date" name="birth" value="{{ teacher.birth }}"></div>
+    <div><input type="date" name="birth_date" value="{{ teacher.birth_date }}"></div>
 </div>
 
 <div class="item">
     <div>Scholarity</div>
     <div>
-        <select name="scholarity">
-            <option value="High School" {% if teacher.scholarity=="High School" %} selected="selected" {% endif %}>High School</option>
-            <option value="Graduate" {% if teacher.scholarity=="Graduate" %} selected="selected" {% endif %}>Graduate</option>
-            <option value="Master's Degree" {% if teacher.scholarity=="Master's Degree" %} selected="selected" {% endif %}>Master's Degree</option>
-            <option value="Doctorate Degree" {% if teacher.scholarity=="Doctorate Degree" %} selected="selected" {% endif %}>Doctorate Degree</option>
+        <select name="education_level">
+            <option value="High School" {% if teacher.education_level=="High School" %} selected="selected" {% endif %}>High School</option>
+            <option value="Graduate" {% if teacher.education_level=="Graduate" %} selected="selected" {% endif %}>Graduate</option>
+            <option value="Master's Degree" {% if teacher.education_level=="Master's Degree" %} selected="selected" {% endif %}>Master's Degree</option>
+            <option value="Doctorate Degree" {% if teacher.education_level=="Doctorate Degree" %} selected="selected" {% endif %}>Doctorate Degree</option>
         </select>
     </div>
 </div>
@@ -28,14 +28,14 @@
 <div class="item">
     <div>Type of Class</div>
     <div>
-        <span><input type="radio" name="type_class" value="Distance" {% if teacher.type_class=="Distance" %} checked="checked" {% endif %}>Distance</span>
-        <span><input type="radio" name="type_class" value="Presential" {% if teacher.type_class=="Presential" %} checked="checked" {% endif %}>Presential</span></div>
+        <span><input type="radio" name="class_type" value="Distance" {% if teacher.class_type=="Distance" %} checked="checked" {% endif %}>Distance</span>
+        <span><input type="radio" name="class_type" value="Presential" {% if teacher.class_type=="Presential" %} checked="checked" {% endif %}>Presential</span></div>
 </div>
 
 <div class="item">
     <div>Subjects</div>
     <div>
-        <input type="text" name="subjects" placeholder="Put subjects separated by commas" value="{{ teacher.subjects }}">
+        <input type="text" name="subjects_taught" placeholder="Put subjects separated by commas" value="{{ teacher.subjects_taught }}">
     </div>
 </div>
 <button type="submit">Submit</button>

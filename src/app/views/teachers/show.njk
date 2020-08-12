@@ -18,18 +18,18 @@
 
             <div class="item">
                 <div>Scholarity</div>
-                <div>{{ teacher.scholarity }}</div>
+                <div>{{ teacher.education_level }}</div>
             </div>
 
             <div class="item">
                 <div>Type of Class</div>
-                <div>{{ teacher.type_class }}</div>
+                <div>{{ teacher.class_type }}</div>
             </div>
 
             <div class="item">
                 <div>Subjects</div>
                 <div>
-                    {% for subject in teacher.subjectArray %}
+                    {% for subject in teacher.subjects_taught %}
                         <span>{{subject}}</span>
                         {% endfor%}
                     </div>
@@ -37,7 +37,7 @@
 
                 <div class="item">
                     <div>Since</div>
-                    <div>{{ teacher.date}}</div>
+                    <div>{{ teacher.created_at}}</div>
                 </div>
 
                 <a href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
