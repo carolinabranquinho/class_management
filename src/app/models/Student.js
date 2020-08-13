@@ -109,4 +109,20 @@ module.exports = {
       callback(results.rows);
     });
   },
+
+  findBy(filter, callback) {
+    db.query(
+      `
+    SELECT students.*
+    FROM students
+    WHERE students.name ILIKE '%${filter}%'
+    OR students.email ILIKE '%${filter}%'
+    ORDER BY name ASC`,
+      (err, results) => {
+        if (err) throw `Database error ${err}`;
+
+        callback(results.rows);
+      }
+    );
+  },
 };
