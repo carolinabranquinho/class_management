@@ -287,3 +287,34 @@ header .active {
   border-bottom: 1px solid #555;
   background-color: black;
 }
+
+/*=================== PAGINATE ================*/
+
+.table_index {
+  display: grid;
+  grid-template: 64px 1fr 16px / 1fr;
+  padding: 1rem;
+}
+
+.table_index .header {
+  margin: 0;
+  align-self: flex-start;
+}
+
+.table_index .pagination {
+  margin: 0;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  filter: brightness(0.3);
+  border-bottom: 1px solid white;
+}
