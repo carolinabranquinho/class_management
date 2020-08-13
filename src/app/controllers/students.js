@@ -3,22 +3,37 @@ const Student = require("../models/Student");
 
 module.exports = {
   index(req, res) {
-    const { filter } = req.query;
+    let { filter, page, limit } = req.query;
 
-    if (filter) {
-      Student.findBy(filter, (students) => {
-        return res.render("students/index", { students, filter });
-      });
-    } else {
-      Student.all((students) => {
-        return res.render("students/index", { students });
-      });
-    }
+    page = page || 1;
+    limit = limit || 2;
+    let offset = limit * (page - 1);
+
+    const params = {
+      filter,
+      page,
+      limit,
+      offset,
+      callback(students) {
+        const pagination = {
+          total: Math.ceil(students[0].total / limit),
+          page,
+        };
+
+        return res.render("students/index", {
+          students,
+          filter,
+          pagination,
+        });
+      },
+    };
+
+    Student.paginate(params);
   },
 
   create(req, res) {
-    Student.teachersSelectOption((options) => {
-      return res.render("students/create", { teachers: options });
+    Student.studentsSelectOption((options) => {
+      return res.render("students/create", { students: options });
     });
   },
 
@@ -56,8 +71,8 @@ module.exports = {
 
       student.birth = calc_date(student.birth).iso;
 
-      Student.teachersSelectOption((options) => {
-        return res.render("students/edit", { student, teachers: options });
+      Student.studentsSelectOption((options) => {
+        return res.render("students/edit", { student, students: options });
       });
     });
   },
