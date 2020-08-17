@@ -32,8 +32,8 @@ module.exports = {
   },
 
   create(req, res) {
-    Student.studentsSelectOption((options) => {
-      return res.render("students/create", { students: options });
+    Student.teachersSelectOption((options) => {
+      return res.render("students/create", { teachers: options });
     });
   },
 
